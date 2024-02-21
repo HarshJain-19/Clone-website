@@ -8,8 +8,4 @@
 
 
 ### My Hosted Link
-<<<<<<< HEAD
 []
-=======
-``
->>>>>>> 12955eb5ab63ebbe9eb18acca282a38bc7f87557
