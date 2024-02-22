@@ -11,9 +11,15 @@
 :root {
     size: 62.5%;
     --btn-clr: #4A9CA6;
+    --h3-clr: #0000009c;
+    --h2-clr: #000000d5;
 }
 .body {
     margin: 0 auto;
+}
+*::selection {
+    background-color: var(--btn-clr);
+    color: #fff;
 }
 
 /** Header*/
@@ -44,6 +50,7 @@ header .acc {
 .acc > span {
     vertical-align: middle;
     transition: transform 0.2s;
+    user-select: none;
 }
 .acc:hover > span:not(.hover-not) {
     transform: rotate(180deg);
@@ -80,10 +87,10 @@ header .btns .btn2:hover{
     background-color: transparent;
 }
 
-/** show*/
+/*^ show*/
 header div {
     position: relative;
-    transition: display 0.5s;
+    transition: opacity 0.1s 0s ease-out;
     cursor: pointer;
 }  
 .show {
@@ -92,9 +99,10 @@ header div {
     padding: 2rem 1rem;
     display: none; grid-template-columns: repeat(2, 1fr);
     width: max-content;
+    opacity: 0;
 }
 header div:hover > .show {
-    display: grid;
+    opacity: 1; display: grid;
 }
 .show > div {
     margin: 1.7rem 1rem 0.6rem;
@@ -158,6 +166,7 @@ main .first img {
     width: 50%;
     display: block; margin: 2rem auto 0;
 }
+
 main .desc {
     text-align: center;
     margin: 1rem;
@@ -168,13 +177,14 @@ main h1.desc {
     margin: 2rem; 
     font-size: 2.5rem; font-weight: bold;
 }
+/*^ Gallery*/
 main .gall {
     display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);
-    padding: 1rem 6rem;
+    padding: 1rem 8rem;
 }
 main .gall img {
     width: 100%;
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 main .gall div {
     padding-top: 5rem;
@@ -183,17 +193,65 @@ main .gall div {
 main .gall div h2 {
     font-size: 2.5rem;
     font-weight: 400;
-    color: #000000e7;
+    color: var(--h2-clr);
+    margin: 0 1.5rem;
 }
 main .gall div h3 {
-    color: #000000bd;
-    font-size: 0.8rem; font-weight: 200;
-    margin: 1.3rem 1rem;
+    color: var(--h3-clr);
+    font-size: 1rem; font-weight: 200;
+    margin: 1.3rem 1.5rem;
 }
 main .gall div h3 span {
     color: var(--btn-clr);
     cursor: pointer;
 }
+/*^ signup*/
+main .signup {
+    padding: 3.5rem 0; background-color: rgba(141,90,173,.1);
+    text-align: center;
+}
+main .signup h2 {
+    color: var(--h2-clr);
+    font-size: 3.3rem; font-weight: 600;
+}
+main .signup h3 {
+    color: var(--h3-clr);
+    font-size: 1.4rem; font-weight: 100;
+    margin: 0.5rem 0;
+}
+main .signup div {
+    margin: 3.7rem 0 1rem;
+    display: inline-block; 
+}
+main .signup div input {
+    padding: 1.1rem 1rem; margin: 0;
+    font-size: 1.05rem;
+    border: 0.2rem solid var(--btn-clr); border-radius: 0.5rem 0 0 0.5rem;
+}
+main .signup div input:focus-within {
+    outline: none;
+}
+main .signup div button {
+    padding: 1.1rem 1.5rem; margin-left: -0.5rem;
+    border: 0.2rem solid var(--btn-clr); border-radius: 0 0.5rem 0.5rem 0;
+    background-color: var(--btn-clr); color: #fff;
+    font-size: 1.05rem; font-weight: 600;
+    cursor: pointer;
+}
+main .signup div button:hover {
+    background-color: #fff;
+    color: var(--btn-clr);
+}
+main .signup h4 {
+    font-size: 0.95rem; font-weight: 100;
+    color: var(--h3-clr);
+}
+main .signup h4 > span {
+    color: var(--h2-clr);
+    font-weight: 700;
+}
+
+
 
 /** Footer*/
 
