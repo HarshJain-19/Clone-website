@@ -1,5 +1,4 @@
 /** links*/
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 /** Universal*/
@@ -150,7 +149,7 @@ main {
     width: 100%; 
     background-color: #fff;
 }
-main .first {
+main .home {
     min-height: 100vh;
     background-color: #372459; color: #fff;
     font-size: 2rem;
@@ -158,11 +157,11 @@ main .first {
     letter-spacing: 2px; word-spacing: 3px;
     padding: 3rem 2rem 0;
 }
-main .first h3 {
+main .home h3 {
     margin-top: 1rem;
     font-size: 1.4rem;
 }
-main .first img {
+main .home img {
     width: 50%;
     display: block; margin: 2rem auto 0;
 }
@@ -178,30 +177,30 @@ main h1.desc {
     font-size: 2.5rem; font-weight: bold;
 }
 /*^ Gallery*/
-main .gall {
+main .gallery {
     display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr);
     padding: 1rem 8rem;
 }
-main .gall img {
+main .gallery img {
     width: 100%;
     margin: 0 1.5rem;
 }
-main .gall div {
+main .gallery div {
     padding-top: 5rem;
     letter-spacing: 1px; word-spacing: 1px;
 }
-main .gall div h2 {
+main .gallery div h2 {
     font-size: 2.5rem;
     font-weight: 400;
     color: var(--h2-clr);
     margin: 0 1.5rem;
 }
-main .gall div h3 {
+main .gallery div h3 {
     color: var(--h3-clr);
     font-size: 1rem; font-weight: 200;
     margin: 1.3rem 1.5rem;
 }
-main .gall div h3 span {
+main .gallery div h3 span {
     color: var(--btn-clr);
     cursor: pointer;
 }
@@ -250,8 +249,79 @@ main .signup h4 > span {
     color: var(--h2-clr);
     font-weight: 700;
 }
-
-
+/*^ Section*/
+main .section {
+    margin: 3rem 0; padding: 1rem 0;
+    text-align: center;
+}
+main .section h2 {
+    font-size: 2.6rem;
+    color: var(--h2-clr);
+}
+main .section section {
+    margin: 2rem 12rem; 
+    display: grid; grid-template-columns: repeat(2, 1fr);
+}
+main .section section div {
+    margin: 0 1.5rem;
+}
+main .section section img {
+    width: 100%;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+main .section section h4 {
+    font-size: 1.1rem; font-weight: 100;
+    color: var(--h3-clr);
+}
+/*^ Success stories*/
+.success {
+    text-align: center;
+    margin: 1rem 0;
+}
+.success h2 {
+    font-size: 2.8rem;
+    color: var(--h2-clr);
+}
+.success section {
+    margin: 3rem 12%;
+    display: flex; flex-flow: row wrap;
+    justify-content: space-around;
+    width: 76%;
+}
+.success section .card {
+    width: clamp(250px, 30%, 350px);
+    box-shadow: 0 0 23px 5px rgba(0,0,0,.1);
+    transition: box-shadow 0.5s;
+    border-radius: 0.7rem;
+} 
+.success section .card img:first-of-type {
+    width: 96%; 
+    margin: 2%;
+    border-radius: 0.7rem;
+}
+.success section .card img:last-of-type {
+    height: 32px;
+    object-fit: cover;
+}
+.success section .card:hover {
+    box-shadow: 0 0 80px 5px rgba(0,0,0,.14);
+}
+.success section .card p {
+    font-size: 1.13rem; line-height: 1.75rem;
+    padding: 0.7rem 2.5rem;
+    color: var(--h3-clr);
+}
+.success section .card p:last-child {
+    color: var(--btn-clr);
+    cursor: pointer;
+    font-weight: 100;
+}
+.success section .card p:last-child span {
+    vertical-align: middle;
+    user-select: none;
+    margin-left: 0.7rem;
+}
 
 /** Footer*/
 
