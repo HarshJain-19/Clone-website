@@ -14,7 +14,8 @@
     --h2-clr: #000000d5;
 }
 .body {
-    margin: 0 auto;
+    margin: 0 auto; 
+    overflow-x: hidden;
 }
 *::selection {
     background-color: var(--btn-clr);
@@ -27,6 +28,7 @@ header {
     background-color: #372459;
     padding: 1.7rem 1.2rem;
     position: sticky; top: 0;
+    z-index: 1;
 }
 header .title {
     font-size: 1.35rem; font-weight: bolder;
@@ -218,26 +220,26 @@ main .signup h3 {
     font-size: 1.4rem; font-weight: 100;
     margin: 0.5rem 0;
 }
-main .signup div {
+.signup-form {
     margin: 3.7rem 0 1rem;
     display: inline-block; 
 }
-main .signup div input {
+.signup-form input {
     padding: 1.1rem 1rem; margin: 0;
     font-size: 1.05rem;
     border: 0.2rem solid var(--btn-clr); border-radius: 0.5rem 0 0 0.5rem;
 }
-main .signup div input:focus-within {
+.signup-form input:focus-within {
     outline: none;
 }
-main .signup div button {
+.signup-form button {
     padding: 1.1rem 1.5rem; margin-left: -0.5rem;
     border: 0.2rem solid var(--btn-clr); border-radius: 0 0.5rem 0.5rem 0;
     background-color: var(--btn-clr); color: #fff;
     font-size: 1.05rem; font-weight: 600;
     cursor: pointer;
 }
-main .signup div button:hover {
+.signup-form button:hover {
     background-color: #fff;
     color: var(--btn-clr);
 }
@@ -291,7 +293,7 @@ main .section section h4 {
 }
 .success section .card {
     width: clamp(250px, 30%, 350px);
-    box-shadow: 0 0 23px 5px rgba(0,0,0,.1);
+    box-shadow: 0 0 23px 0 rgba(0,0,0,.1);
     transition: box-shadow 0.5s;
     border-radius: 0.7rem;
 } 
@@ -305,7 +307,7 @@ main .section section h4 {
     object-fit: cover;
 }
 .success section .card:hover {
-    box-shadow: 0 0 80px 5px rgba(0,0,0,.14);
+    box-shadow: 0 0 80px 0 rgba(0,0,0,.14);
 }
 .success section .card p {
     font-size: 1.13rem; line-height: 1.75rem;
@@ -321,6 +323,66 @@ main .section section h4 {
     vertical-align: middle;
     user-select: none;
     margin-left: 0.7rem;
+}
+/*^ Integrations*/
+.integrations {
+    padding: 7.5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--h2-clr);
+}
+.integrations section {
+    display: flex; flex-flow: row wrap;
+    justify-content: center;   
+    margin: 3rem;
+}
+.integrations section img {
+    height: 20px;
+    object-fit: cover;
+    margin: 1.5rem;
+    filter: grayscale(1);
+}
+.integrations section img:hover {
+    filter: grayscale(0);
+}
+.sm-img {
+    height: 45px !important;
+}
+.xsm-img {
+    height: 70px !important;
+}
+/*^ try-free*/
+.try-free {
+    font-size: 16px;
+    padding: 3rem 0;
+    background-color: #372459;
+    display: flex; flex-flow: row wrap-reverse;
+    justify-content: space-evenly;
+}
+.try-free div:first-child {
+    width: 45%;
+    color: #fff;
+    padding: 1rem 2rem; margin: 0 2rem; padding-left: 2.5rem;
+}
+.try-free div:last-child {
+    width: 40%;
+    position: relative;
+}
+.try-free h2 {
+    font-size: 2.8rem; font-weight: 900;
+    margin: 1rem 0;
+}
+.try-free .signup-form {
+    margin-top: 1.5rem !important;
+}
+.try-free p {
+    font-size: 0.9rem; font-weight: 100;
+    margin: 0.1rem 0;
+}
+.try-free img {
+    width: 135%;
+    position: absolute; top: -30%; right: -23%;
 }
 
 /** Footer*/
