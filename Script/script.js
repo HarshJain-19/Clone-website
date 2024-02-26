@@ -7,7 +7,11 @@ window.onscroll = e => {
 }
 
 //* Login Form
-const login = () => document.querySelector(".login-container").classList.add("login-active");
+const login = () => {
+  document.querySelector(".login-container").classList.add("login-active");
+  document.querySelector("[name=email]").value="";
+  document.querySelector("[name=password]").value="";
+};
 document.querySelector(".login-container").onclick =  () => document.querySelector(".login-container").classList.remove("login-active");
 document.querySelector("#login-form").onclick = () => event.stopPropagation();
 
@@ -15,8 +19,6 @@ document.querySelector("#login-form").onclick = () => event.stopPropagation();
 const submitForm = () => {
   event.preventDefault();
   console.log("Your Email Id: %s and password: %s",event.target.elements["email"].value, event.target.elements["password"].value);
-  event.target.elements["email"].value='';
-  event.target.elements["password"].value='';
   document.querySelector(".login-container").classList.remove("login-active");
 }
 const isValidEmail = x => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x);
