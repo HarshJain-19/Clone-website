@@ -14,7 +14,7 @@
     --h2-clr: #000000d5;
 }
 .body {
-    margin: 3.5rem auto 0; 
+    margin: 0 auto; 
     overflow-x: hidden;
 }
 *::-moz-selection {
@@ -32,17 +32,16 @@ a {
 
 /** Header*/
 header {
-    display: -ms-grid;
-    display: grid; -ms-grid-columns: 20% 55% 25%; grid-template-columns: 20% 55% 25%;
-    background-color: #372459;
+    display: -ms-grid; display: grid; -ms-grid-columns: 20% 55% 25%; grid-template-columns: 20% 55% 25%;
+    background-color: #372459; color: #fff;
+    position: relative;
     width: 100%;
-    padding: 1.7rem 1.2rem;
-    position: fixed; top: 0;
-    z-index: 1;
+    padding: 1.4rem 1.2rem;
+    z-index: 1; transition: all 0.5s;
 }
 header .title {
     font-size: 1.35rem; font-weight: bolder;
-    color: #fff;
+    color: inherit;
 }
 header .title > img {
     -webkit-filter: brightness(0) invert(1);
@@ -56,10 +55,17 @@ header > nav {
     display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap;
 } 
 header .acc {
-    color: #fff;
+    color: inherit;
     margin-right: 1.1rem;
     padding: 0.2rem 0.5rem; padding-left: 0;
     font-size: 0.9rem;
+}
+.header-fixed {
+    background-color: #fff; color: var(--h2-clr);
+    position: fixed; top: 0;
+}
+.header-fixed .title > img {
+    filter: none;
 }
 .acc > span {
     vertical-align: middle;
@@ -175,7 +181,46 @@ header div:hover > .show {
 .trans {
     color: transparent !important;
 }
-
+/*^ Login-Form*/ 
+.login-container {
+    position: absolute; top: 0; left: 0;
+    width: 100vw; height: 100vh; overflow: hidden;
+    display: none; place-items: center;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+.login-active {
+    display: grid;
+}
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    user-select: none;
+}
+#login-form {
+    width: 30vw;
+    padding: 2.5rem 2rem;
+    background-color: #fff; color: #000;
+    border-radius: 2rem; border: 0.2rem solid;
+    text-align: center;
+}
+#login-form input {
+    width: 100%;
+    margin: 1rem 0; padding: 0.7rem 1rem;
+    font-size: 1.8rem;
+    outline: none; border: none; border-bottom: 0.2rem solid #000; border-radius: 1rem;
+    background-color: rgba(144, 238, 144, 0.377);
+}
+#login-form input:not([type="submit"]):focus {
+    scale: 1.05;
+}
+#login-form input[type="submit"] {
+    width: auto;
+    display: block; margin: 0.5rem auto;
+    border: 0.15rem solid #000;
+}
+#login-form input[type="submit"]:active {
+    scale: 0.9;
+}
 
 /** Main*/
 main {

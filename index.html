@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./Styles/style.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="./Script/script.js" defer></script>
 </head>
 
 <body>
@@ -140,9 +141,28 @@
             <h3><span class="material-symbols-outlined trans">check</span>Spanish</h3>
           </div>
         </div>
-        <button class="btn1">login</button>
+        <button class="btn1" onclick="login()">login</button>
         <button class="btn2">sign up</button>
       </div>
+
+<!--Login Form-->
+      <Section class="login-container">
+        <form id="login-form" action="">
+          <h2>Login Form</h2>
+          <input type="email" placeholder="enter email id..." autofocus required/>
+          <input type="password"  placeholder="enter password..." required/>
+          <input type="submit" value="Login">
+        </form>
+      </Section>
+      <!-- <Section class="signup-container">
+        <form id="login-form" action="">
+          <h2>Login Form</h2>
+          <input type="email" placeholder="enter email id..." required autofocus/>
+          <input type="password"  placeholder="enter password..." required/>
+          <input type="submit" value="Login">
+        </form>
+      </Section> -->
+
     </header>
     <main>
       <div class="home">
