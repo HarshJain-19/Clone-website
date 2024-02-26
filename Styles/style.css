@@ -209,6 +209,11 @@ header div:hover > .show {
     border-radius: 2rem; border: 0.2rem solid;
     text-align: center;
 }
+#login-form p {
+    font-size: 0.9rem; 
+    color: red;
+    text-align: justify;
+}
 #login-form input {
     width: 100%;
     margin: 1rem 0; padding: 0.7rem 1rem;

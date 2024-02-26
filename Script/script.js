@@ -11,3 +11,20 @@ const login = () => document.querySelector(".login-container").classList.add("lo
 document.querySelector(".login-container").onclick =  () => document.querySelector(".login-container").classList.remove("login-active");
 document.querySelector("#login-form").onclick = () => event.stopPropagation();
 
+//* Submit Form
+const submitForm = () => {
+  event.preventDefault();
+  console.log("Your Email Id: %s and password: %s",event.target.elements["email"].value, event.target.elements["password"].value);
+  event.target.elements["email"].value='';
+  event.target.elements["password"].value='';
+  document.querySelector(".login-container").classList.remove("login-active");
+}
+const isValidEmail = x => /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x);
+document.getElementById("email").oninput = e => {
+  if (!isValidEmail(e.target.value)) 
+    document.getElementById("invalid").innerText="Invalid Email";
+  else 
+  document.getElementById("invalid").innerText="";
+}
+
+

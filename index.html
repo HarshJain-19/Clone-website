@@ -147,10 +147,11 @@
 
 <!--Login Form-->
       <Section class="login-container">
-        <form id="login-form" action="">
+        <form id="login-form" action="#" onsubmit="submitForm()">
           <h2>Login Form</h2>
-          <input type="email" placeholder="enter email id..." autofocus required/>
-          <input type="password"  placeholder="enter password..." required/>
+          <input name="email" id="email" type="email" placeholder="enter email id..." autofocus required/>
+          <p id="invalid"></p>
+          <input name="password" type="password"  placeholder="enter password..." required/>
           <input type="submit" value="Login">
         </form>
       </Section>
